@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Architecture - Project Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: #6e8efb;
+            color: white;
+        }
+
+        /* Content */
+        .content {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .architecture-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .architecture-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .architecture-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            margin-top: 2rem;
+        }
+
+        .tech-stack-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-item {
+            background: #f0f2f5;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .diagram-container {
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .architecture-diagram {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="project-main.html" class="logo-container">
+                <img src="https://vishnu.edu.in/upload_news/newlogo.png" alt="Vishnu Universal Learning" class="logo-image">
+                <span class="logo-text">Project Showcase</span>
+            </a>
+            <div class="nav-links">
+                <a href="project-main.html">Project Overview</a>
+                <a href="hardware.html">Hardware</a>
+                <a href="software.html" class="active">Software</a>
+                <a href="bmc.html">BMC</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-container">
+            <h1 class="section-title">Software Architecture</h1>
+            <p class="section-subtitle">Software components powering the Smart Gas Detection and Fire Prevention System</p>
+
+            <div class="architecture-grid">
+                <div class="architecture-card">
+                    <h2 class="architecture-title">Development Environment</h2>
+                    <p class="architecture-description">Core development tools and programming environment.</p>
+                    <div class="tech-stack">
+                        <h3 class="tech-stack-title">Technologies Used:</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Arduino IDE</span>
+                            <span class="tech-item">C++ Programming</span>
+                            <span class="tech-item">ESP32 SDK</span>
+                            <span class="tech-item">Libraries for MQ6</span>
+                            <span class="tech-item">Servo Library</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-card">
+                    <h2 class="architecture-title">Blynk IoT Platform</h2>
+                    <p class="architecture-description">Real-time monitoring and control interface for users.</p>
+                    <div class="tech-stack">
+                        <h3 class="tech-stack-title">Features:</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Gas Level Monitoring</span>
+                            <span class="tech-item">Emergency Alerts</span>
+                            <span class="tech-item">Remote Control</span>
+                            <span class="tech-item">Data Visualization</span>
+                            <span class="tech-item">Event Logging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-card">
+                    <h2 class="architecture-title">Core Functions</h2>
+                    <p class="architecture-description">Essential software functions for system operation.</p>
+                    <div class="tech-stack">
+                        <h3 class="tech-stack-title">Key Features:</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Gas Detection Algorithm</span>
+                            <span class="tech-item">Threshold Monitoring</span>
+                            <span class="tech-item">Emergency Response</span>
+                            <span class="tech-item">Data Processing</span>
+                            <span class="tech-item">Alert Generation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-card" style="margin-top: 2rem;">
+                <h2 class="architecture-title">System Integration</h2>
+                <p class="architecture-description">Integration of hardware components and software systems.</p>
+                <div class="tech-stack">
+                    <h3 class="tech-stack-title">Components:</h3>
+                    <div class="tech-list">
+                        <span class="tech-item">Sensor Data Processing</span>
+                        <span class="tech-item">Actuator Control</span>
+                        <span class="tech-item">Alert System</span>
+                        <span class="tech-item">Mobile App Integration</span>
+                        <span class="tech-item">Real-time Monitoring</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Software Architecture Diagram" class="architecture-diagram">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Smart Home Automation Project. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

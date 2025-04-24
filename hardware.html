@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Components - Project Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background: #6e8efb;
+            color: white;
+        }
+
+        /* Content */
+        .content {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .hardware-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hardware-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .hardware-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .specs-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .specs-list li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .specs-list li:before {
+            content: "•";
+            color: #6e8efb;
+            margin-right: 0.5rem;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .hardware-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="project-main.html" class="logo-container">
+                <img src="https://vishnu.edu.in/upload_news/newlogo.png" alt="Vishnu Universal Learning" class="logo-image">
+                <span class="logo-text">Project Showcase</span>
+            </a>
+            <div class="nav-links">
+                <a href="project-main.html">Project Overview</a>
+                <a href="hardware.html" class="active">Hardware</a>
+                <a href="software.html">Software</a>
+                <a href="bmc.html">BMC</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-container">
+            <h1 class="section-title">Hardware Components</h1>
+            <p class="section-subtitle">Core components of the Smart Gas Detection and Fire Prevention System</p>
+
+            <div class="hardware-grid">
+                <div class="hardware-card">
+                    <h2 class="hardware-title">ESP32 Microcontroller</h2>
+                    <p class="hardware-description">Main control unit for processing sensor data and managing system responses.</p>
+                    <ul class="specs-list">
+                        <li>Dual-core Xtensa LX6 microprocessor</li>
+                        <li>240 MHz clock frequency</li>
+                        <li>512 KB RAM</li>
+                        <li>4MB Flash Memory</li>
+                        <li>WiFi 802.11 b/g/n</li>
+                        <li>Bluetooth 4.2</li>
+                        <li>34 GPIO pins</li>
+                        <li>12-bit ADC</li>
+                        <li>Operating Voltage: 3.3V</li>
+                    </ul>
+                </div>
+
+                <div class="hardware-card">
+                    <h2 class="hardware-title">MQ6 Gas Sensor</h2>
+                    <p class="hardware-description">High-sensitivity sensor for detecting LPG, butane, and propane gas leaks.</p>
+                    <ul class="specs-list">
+                        <li>Detection Range: 200-10000 ppm</li>
+                        <li>Operating Voltage: 5V</li>
+                        <li>Heater Consumption: <800mW</li>
+                        <li>Response Time: <10s</li>
+                        <li>Operating Temperature: -10°C to 50°C</li>
+                        <li>Analog Output</li>
+                        <li>High Sensitivity to LPG, Butane, Propane</li>
+                        <li>Long Life and Stable Performance</li>
+                    </ul>
+                </div>
+
+                <div class="hardware-card">
+                    <h2 class="hardware-title">Servo Motor</h2>
+                    <p class="hardware-description">Controls gas valve for emergency shutoff during leak detection.</p>
+                    <ul class="specs-list">
+                        <li>Operating Voltage: 4.8V - 6V</li>
+                        <li>Stall Torque: 1.8 kg/cm</li>
+                        <li>Speed: 0.1s/60°</li>
+                        <li>Rotation: 180°</li>
+                        <li>PWM Control</li>
+                        <li>Weight: 9g</li>
+                        <li>Operating Temperature: 0°C to 55°C</li>
+                    </ul>
+                </div>
+
+                <div class="hardware-card">
+                    <h2 class="hardware-title">Exhaust Fan</h2>
+                    <p class="hardware-description">Automatic ventilation system for gas dispersion during leaks.</p>
+                    <ul class="specs-list">
+                        <li>Voltage: 220V AC</li>
+                        <li>Power: 25W</li>
+                        <li>Air Flow: 100 CFM</li>
+                        <li>Noise Level: <40 dB</li>
+                        <li>Size: 6 inches</li>
+                        <li>Speed: 1200 RPM</li>
+                        <li>Material: ABS Plastic</li>
+                    </ul>
+                </div>
+
+                <div class="hardware-card">
+                    <h2 class="hardware-title">Relay Module</h2>
+                    <p class="hardware-description">Controls high-voltage components like exhaust fans and alarms.</p>
+                    <ul class="specs-list">
+                        <li>Operating Voltage: 5V DC</li>
+                        <li>Maximum Load: 10A 250V AC</li>
+                        <li>Number of Channels: 4</li>
+                        <li>Switching Time: <10ms</li>
+                        <li>Optical Isolation</li>
+                        <li>LED Indicators</li>
+                        <li>Low-level Trigger</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1558002038-1055e5b7e0c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Hardware Setup" class="hardware-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Smart Gas Detection and Fire Accidents Prevention System. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
